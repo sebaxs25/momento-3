@@ -1,0 +1,35 @@
+{
+    "usuarios" :[
+    {
+        "id": 1,
+        "usuario": "sebastian",
+        "email": "sebas@gmail.com",
+        "contrasena": "12345678"
+    },
+     { "id": 2, "usuario": "andrea", "email": "andrea@example.com", "contrasena": "pass2024" },
+    { "id": 3, "usuario": "carlos", "email": "carlos@mail.com", "contrasena": "car12345" },
+    { "id": 4, "usuario": "valentina", "email": "valen@mail.com", "contrasena": "valen789" },
+    { "id": 5, "usuario": "juan", "email": "juanito@gmail.com", "contrasena": "juan321" },
+    { "id": 6, "usuario": "laura", "email": "laura@correo.com", "contrasena": "laupass" },
+    { "id": 7, "usuario": "mario", "email": "mario@live.com", "contrasena": "mariolive" },
+    { "id": 8, "usuario": "sofia", "email": "sofi@cool.com", "contrasena": "sofi7890" },
+    { "id": 9, "usuario": "diego", "email": "dieguito@mail.com", "contrasena": "d123456" },
+    { "id": 10, "usuario": "camila", "email": "cami@correo.com", "contrasena": "cami123" },
+    { "id": 11, "usuario": "lucas", "email": "lucas@mail.com", "contrasena": "luc789" },
+    { "id": 12, "usuario": "martina", "email": "marti@gmail.com", "contrasena": "martinaX" },
+    { "id": 13, "usuario": "santiago", "email": "santi@gmail.com", "contrasena": "santy2024" },
+    { "id": 14, "usuario": "paula", "email": "paula@live.com", "contrasena": "paulita1" },
+    { "id": 15, "usuario": "alejandro", "email": "alej@mail.com", "contrasena": "alepass" },
+    { "id": 16, "usuario": "karla", "email": "karla@mail.com", "contrasena": "karlita" },
+    { "id": 17, "usuario": "nicolas", "email": "nico@correo.com", "contrasena": "nicopass" },
+    { "id": 18, "usuario": "elena", "email": "elena@mail.com", "contrasena": "ele2025" },
+    { "id": 19, "usuario": "david", "email": "david123@gmail.com", "contrasena": "dpass99" },
+    { "id": 20, "usuario": "renata", "email": "rena@mail.com", "contrasena": "renataok" },
+    { "id": 21, "usuario": "esteban", "email": "esteban@outlook.com", "contrasena": "estebpass" },
+    { "id": 22, "usuario": "veronica", "email": "vero@mail.com", "contrasena": "verito88" },
+    { "id": 23, "usuario": "tomás", "email": "tomas@gmail.com", "contrasena": "t123456" },
+    { "id": 24, "usuario": "antonella", "email": "antonella@mail.com", "contrasena": "antopass" },
+    { "id": 25, "usuario": "marcos", "email": "marcos@email.com", "contrasena": "marcpass" }
+  
+]
+}

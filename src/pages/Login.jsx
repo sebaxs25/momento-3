@@ -1,13 +1,24 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./Login.css"
 import { alertaError, generarToken } from "../helpers/funciones";
 import { useNavigate } from "react-router-dom";
-
+let apiUsuarios = "http://localhost:4000/usuarios";
 function Login (){
   const [getEmail,setEmail] = useState ("")
   const [getContraseña,setContraseña] = useState ("")
   const [usuarios, setUsuarios] = useState([]);
   let navigate = useNavigate();
+  
+  
+  function getUsuarios() {
+    fetch(apiUsuarios)
+      .then((response) => response.json())
+      .then((data) => setUsuarios(data))
+      .catch((error) => console.log(error));
+  }
+  useEffect(() => {
+    getUsuarios();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();

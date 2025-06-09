@@ -1,6 +1,16 @@
+import Contenido from "../components/Contenido"
+import MenuLateral from "../components/MenuLateral"
+import "./Home.css"
 function Home (){
-    <section className="home_informacion">
-
-    </section>
+    return(
+    <div className="home_informacion">
+        <MenuLateral/>
+        <section>
+        <div>
+            <Contenido/>
+        </div>
+        </section>
+    </div>
+    )
 }
 export default Home

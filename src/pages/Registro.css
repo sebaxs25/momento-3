@@ -9,7 +9,7 @@ body {
 }
 
 /* Contenedor del formulario */
-.login-container {
+.register-container {
   width: 100%;
   max-width: 360px;
   padding: 2rem;
@@ -31,13 +31,13 @@ body {
   }
 }
 
-.login-form h2 {
+.register-form h2 {
   text-align: center;
   color: #4e54c8;
   margin-bottom: 1.5rem;
 }
 
-.login-form input {
+.register-form input {
   width: 100%;
   padding: 12px 14px;
   margin-bottom: 1rem;
@@ -47,12 +47,12 @@ body {
   transition: border 0.3s;
 }
 
-.login-form input:focus {
+.register-form input:focus {
   border-color: #4e54c8;
   box-shadow: 0 0 5px rgba(78, 84, 200, 0.3);
 }
 
-.login-form button {
+.register-form button {
   width: 100%;
   padding: 12px;
   background: #4e54c8;
@@ -64,6 +64,6 @@ body {
   transition: background 0.3s;
 }
 
-.login-form button:hover {
+.register-form button:hover {
   background: #3b3fc1;
 }

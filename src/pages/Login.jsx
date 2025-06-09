@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import "./Login.css"
-import { alertaError, generarToken } from "../helpers/funciones";
-import { useNavigate } from "react-router-dom";
+import { alertaError, generarToken, alertaRedirecion } from "../helpers/funciones";
+import { useNavigate, Link } from "react-router-dom";
 let apiUsuarios = "http://localhost:4000/usuarios";
 function Login (){
   const [getEmail,setEmail] = useState ("")
-  const [getContraseña,setContraseña] = useState ("")
+  const [getContrasena,setContrasena] = useState ("")
   const [usuarios, setUsuarios] = useState([]);
   let navigate = useNavigate();
   
@@ -37,16 +37,16 @@ function inicioSesion(){
     let tokenAcceso = generarToken();
     localStorage.setItem("token", tokenAcceso);
       localStorage.setItem("usuario", JSON.stringify(buscarUsuarios()));
-      alertaRedireccion(
+      alertaRedirecion(
         navigate,
         "Bienvenido " + buscarUsuarios().usuarios,
-        "En breves segundos será redireccionado al Home",
+        "En breves segundos será redireccionado a la pagina principal",
         "success",
         "/home"
       );
   
   }else {
-    alertaError()
+    alertaError("ERROR", "Email Y/O Contraseña incorrectos", "error")
   }
 
 }
@@ -70,13 +70,14 @@ function inicioSesion(){
           <label>Contraseña</label>
           <input 
             type="password" 
-            value={getContraseña}
-            onChange={(e) => setContraseña(e.target.value)}
+            value={getContrasena}
+            onChange={(e) => setContrasena(e.target.value)}
             required 
           />
         </div>
 
         <button type="submit" onClick={inicioSesion}>Entrar</button>
+        <Link to= "/registro" className = "link">¿no tienes cuenta?</Link>
       </form>
     </div>
     )

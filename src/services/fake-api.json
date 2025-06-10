@@ -1,47 +1,6 @@
 {
   "usuarios": [
-    {
-      "id": 1,
-      "usuario": "sebastian",
-      "email": "sebas@gmail.com",
-      "contrasena": "12345678"
-    },
-    {
-      "id": 2,
-      "usuario": "andrea",
-      "email": "andrea@example.com",
-      "contrasena": "pass2024"
-    },
-    {
-      "id": 3,
-      "usuario": "carlos",
-      "email": "carlos@mail.com",
-      "contrasena": "car12345"
-    },
-    {
-      "id": 4,
-      "usuario": "valentina",
-      "email": "valen@mail.com",
-      "contrasena": "valen789"
-    },
-    {
-      "id": 5,
-      "usuario": "juan",
-      "email": "juanito@gmail.com",
-      "contrasena": "juan321"
-    },
-    {
-      "id": 6,
-      "usuario": "laura",
-      "email": "laura@correo.com",
-      "contrasena": "laupass"
-    },
-    {
-      "id": 7,
-      "usuario": "mario",
-      "email": "mario@live.com",
-      "contrasena": "mariolive"
-    },
+
     {
       "id": "f574",
       "usuario": "sebaxs25",

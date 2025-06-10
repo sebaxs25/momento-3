@@ -40,3 +40,153 @@
   background: #1e1e1e;
   color: #ff6b6b;
 }
+.formulario{
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.formulario button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #0056b3;
+}
+
+/* Listar.css */
+.lista-suscripciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.tarjeta-suscripcion {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.tarjeta-suscripcion:hover {
+  transform: scale(1.03);
+}
+
+.tarjeta-suscripcion h3 {
+  margin-top: 0;
+}
+
+.botones-tarjeta button {
+  margin: 0.5rem 0.25rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.botones-tarjeta .editar {
+  background-color: #ffc107;
+  color: black;
+}
+
+.botones-tarjeta .eliminar {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Buscar.css */
+.buscar-container {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.buscar-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.resultados-busqueda {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Editar.css */
+.editar-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.editar-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.editar-form input,
+.editar-form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.editar-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editar-form button:hover {
+  background-color: #218838;
+}

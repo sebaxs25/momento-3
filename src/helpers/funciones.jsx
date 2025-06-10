@@ -36,3 +36,22 @@ export function alertaError(titulo, mensaje, icono) {
     icon: icono,
   });
 }
+export function eliminarElemento (titulo, mensaje, icono){
+Swal.fire({
+  title: titulo,
+  text: mensaje,
+  icon: icono,
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Si, eliminar"
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: titulo,
+      text:  mensaje,
+      icon: icono
+    });
+  }
+});
+}

@@ -17,8 +17,9 @@ function MenuLateral(){
     <aside className="menu_lateral">
       <h2 className="logo">🎬 CineApp</h2>
       <nav className="menu_links">
-        <Link to="/" className="link_item"></Link>
-        <Link to="/" className="link_item"></Link>
+        <Link to="/home" className="link_item">Inicio</Link>
+        <Link to="registrar" className="link_item">Registrar</Link>
+        <Link to="suscripciones" className="link_item"></Link>
         <Link to="/" className="link_item"></Link>
         <button onClick={cerrarSesion} type='button' className="">Cerrar sesión</button>
         </nav>

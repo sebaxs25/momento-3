@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import Registrar from "../pages/Registrar";
 import Registro from "../pages/Registro";
 import Suscripciones from "../pages/Suscripciones";
+import Editar from "../pages/Editar";
 
 export let enrutador = [
 {
@@ -17,6 +18,10 @@ export let enrutador = [
     {
        path: "suscripciones",
        element: <Suscripciones/>
+    },
+    {
+        path :"editar",
+        element:<Editar/>
     }
     ]
 

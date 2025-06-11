@@ -19,8 +19,8 @@ function MenuLateral(){
       <nav className="menu_links">
         <Link to="/home" className="link_item">Inicio</Link>
         <Link to="registrar" className="link_item">Registrar</Link>
-        <Link to="suscripciones" className="link_item"></Link>
-        <Link to="/" className="link_item"></Link>
+        <Link to="suscripciones" className="link_item">Suscrpicones</Link>
+        <Link to="editar" className="link_item">Editar</Link>
         <button onClick={cerrarSesion} type='button' className="">Cerrar sesión</button>
         </nav>
     </aside>

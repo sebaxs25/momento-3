@@ -9,7 +9,7 @@ function Suscripciones (){
     fetch(apiUsuarios)
       .then((res) => res.json())
       .then((data) => setSuscripciones(data));
-  };
+  
     function confirmacion(id){
         eliminarElemento (
             "¿Esta seguro?","esta accion no se puede desacer","warning"
@@ -23,7 +23,8 @@ function Suscripciones (){
         });
       }
     });
-
+  
+    
     }
 
 
@@ -32,18 +33,18 @@ function Suscripciones (){
   }, []);
     return(
         <div className="lista">
-      <h2>Suscripciones registradas</h2>
+      <h2 className="titulo_suscripciones" >Suscripciones registradas</h2>
       {suscripciones.map((sus) => (
         <div key={sus.id} className="card">
           <h3>{sus.nombre}</h3>
           <p>Categoría: {sus.categoria}</p>
           <p>Costo: ${sus.costo}</p>
           <p>Renovación: {sus.fecha}</p>
-          <button onClick={() => eliminar(sus.id)}>Eliminar</button>
+          <button onClick={() => confirmacion(sus.id)}>Eliminar</button>
         </div>
       ))}
     </div>
   );
 }
-
+}
 export default Suscripciones;

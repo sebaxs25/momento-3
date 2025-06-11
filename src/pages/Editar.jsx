@@ -1,28 +1,30 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { guardarCambios } from "../helpers/funciones";
 
 function Editar() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [nombre, setNombre] = useState("");
   const [costo, setCosto] = useState("");
   const [categoria, setCategoria] = useState("");
   const [fechaRenovacion, setFechaRenovacion] = useState("");
-  const navigate = useNavigate();
-  let apiUsuarios =  
+  const apiUsuarios = "http://localhost:4000/suscripciones";
+
   useEffect(() => {
-    fetch(`http://localhost:4000/suscripciones/${id}`)
+    fetch(`${apiUsuarios}/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        setNombre(data.nombre);
-        setCosto(data.costo);
-        setCategoria(data.categoria);
-        setFechaRenovacion(data.fechaRenovacion);
-      });
+        setNombre(data.nombre || "");
+        setCosto(data.costo || "");
+        setCategoria(data.categoria || "");
+        setFechaRenovacion(data.fechaRenovacion || "");
+      })
+      .catch((err) => console.log("Error cargando datos:", err));
   }, [id]);
 
   const actualizarSuscripcion = (e) => {
     e.preventDefault();
-
     const datosActualizados = {
       nombre,
       costo,
@@ -30,22 +32,23 @@ function Editar() {
       fechaRenovacion,
     };
 
-    fetch(`http://localhost:4000/suscripciones/${id}`, {
-      method: "PUT",
+    fetch(`${apiUsuarios}/${id}`, {
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(datosActualizados),
     })
       .then(() => {
-        Swal.fire(
-          "Actualizado",
-          "La suscripción fue actualizada correctamente",
-          "success"
+        guardarCambios(
+          navigate,
+          "¡Actualizado!",
+          "Los cambios se guardaron correctamente",
+          "success",
+          "/suscripciones"
         );
-        navigate("/suscripciones");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log("Error actualizando:", error));
   };
 
   return (

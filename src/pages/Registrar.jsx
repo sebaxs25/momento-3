@@ -9,7 +9,7 @@ function Registrar() {
     const [categoria, setCategoria] = useState("");
     const [fecha, setFecha] = useState("");
     const navigate = useNavigate();
-    let apiUsuarios = "http://localhost:4000/usuarios";
+    let apiUsuarios = "http://localhost:4000/suscripciones";
     const handleSubmit = (e) => {
         e.preventDefault();
     }

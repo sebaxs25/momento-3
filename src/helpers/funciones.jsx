@@ -37,7 +37,7 @@ export function alertaError(titulo, mensaje, icono) {
   });
 }
 export function eliminarElemento (titulo, mensaje, icono){
-Swal.fire({
+ return Swal.fire({
   title: titulo,
   text: mensaje,
   icon: icono,
@@ -48,10 +48,27 @@ Swal.fire({
 }).then((result) => {
   if (result.isConfirmed) {
     Swal.fire({
-      title: titulo,
-      text:  mensaje,
-      icon: icono
+      title: "Eliminado", 
+      text:  "Suscripción eliminada",
+      icon: "success"
     });
+  }
+});
+}
+
+ export function guardarCambios(titulo){
+Swal.fire({
+  title: titulo,
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: "Save",
+  denyButtonText: `Don't save`
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    Swal.fire("Guardado", "", "success");
+  } else if (result.isDenied) {
+    Swal.fire("cambios no guardados", "", "info");
   }
 });
 }

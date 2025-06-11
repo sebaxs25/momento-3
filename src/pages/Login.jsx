@@ -39,7 +39,7 @@ function inicioSesion(){
       localStorage.setItem("usuario", JSON.stringify(buscarUsuarios()));
       alertaRedirecion(
         navigate,
-        "Bienvenido " + buscarUsuarios().usuarios,
+        "Bienvenido " + buscarUsuarios().apiUsuarios,
         "En breves segundos será redireccionado a la pagina principal",
         "success",
         "/home"

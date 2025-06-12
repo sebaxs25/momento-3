@@ -20,7 +20,7 @@ export let enrutador = [
        element: <Suscripciones/>
     },
     {
-        path :"editar",
+        path :"editar/:id",
         element:<Editar/>
     }
     ]

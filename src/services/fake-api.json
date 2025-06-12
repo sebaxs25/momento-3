@@ -17,13 +17,6 @@
   ],
   "suscripciones": [
     {
-      "id": "3b60",
-      "nombre": "netflix",
-      "costo": "20.000",
-      "categoria": "",
-      "fecha": "2025-06-11"
-    },
-    {
       "id": "df82",
       "nombre": "neflixt",
       "costo": "30000",

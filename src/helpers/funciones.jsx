@@ -36,24 +36,22 @@ export function alertaError(titulo, mensaje, icono) {
     icon: icono,
   });
 }
-export function eliminarElemento (titulo, mensaje, icono){
- return Swal.fire({
-  title: titulo,
-  text: mensaje,
-  icon: icono,
-  showCancelButton: true,
-  confirmButtonColor: "#3085d6",
-  cancelButtonColor: "#d33",
-  confirmButtonText: "Si, eliminar"
-}).then((result) => {
-  if (result.isConfirmed) {
-    Swal.fire({
-      title: "Eliminado", 
-      text:  "Suscripción eliminada",
-      icon: "success"
-    });
-  }
-});
+export function eliminarElemento(titulo, mensaje, icono, onConfirm) {
+  return Swal.fire({
+    title: titulo,
+    text: mensaje,
+    icon: icono,
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sí, eliminar",
+    cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed && onConfirm) {
+      return onConfirm();
+    }
+    return result;
+  });
 }
 
  export function guardarCambios(titulo){
